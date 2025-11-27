@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-Level Destructuring</title>
+</head>
+<body>
+  <h1>People Addresses</h1>
+  <ul id="peopleList"></ul>
+
+  <script>
+    const people = [
+      { name: "Alice", address: { city: "New York", street: { name: "Broadway", number: 123 } } },
+      { name: "Bob", address: { city: "Los Angeles", street: { name: "Sunset Boulevard", number: 456 } } }
+    ];
+
+    // Use multi-level destructuring
+    const result = people.map(({ name, address: { city, street: { name: streetName } } }) => 
+      `${name} lives in ${city} on ${streetName}`
+    );
+
+    // Display results in HTML
+    const ul = document.getElementById("peopleList");
+    result.forEach(text => {
+      const li = document.createElement("li");
+      li.textContent = text;
+      ul.appendChild(li);
+    });
+  </script>
+</body>
+</html>
