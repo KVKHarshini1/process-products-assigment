@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrow Function with Default Parameters</title>
+</head>
+<body>
+  <h2>Arrow Function: multiply(a, b) with Defaults</h2>
+  <p>Open console to see output.</p>
+
+  <script>
+    // Arrow function with default parameters
+    const multiply = (a = 1, b = 1) => a * b;
+
+    // Test cases
+    console.log(multiply(3, 4)); // Output: 12
+    console.log(multiply());     // Output: 1
+    console.log(multiply(5));    // Output: 5 (b defaults to 1)
+  </script>
+</body>
+</html>
