@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread, Rest & Destructuring</title>
+</head>
+<body>
+
+    <h2>Open Console to See Output</h2>
+
+    <script>
+        // a) Spread Operator - Merge two arrays
+        const arr1 = [1, 2, 3];
+        const arr2 = [4, 5];
+
+        const mergedArr = [...arr1, ...arr2];
+        console.log("Merged Array:", mergedArr); // [1,2,3,4,5]
+
+
+        // b) Rest Operator - Sum of all numbers
+        const
