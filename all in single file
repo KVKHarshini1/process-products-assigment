@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Concepts - Easy Version</title>
+</head>
+<body>
+  <h2>Check Console for Output</h2>
+
+  <script>
+    // Template Literals
+    console.log(`5 + 7 = ${5 + 7}`);
+    console.log(`Line1
+Line2
+Line3`);
+    const firstName = "John", lastName = "Doe";
+    console.log(`Full Name: ${firstName} ${lastName}`);
+
+    //  Arrow Functions & this
+    const square = n => n*n;
+    console.log(square(5));
+    const obj = { value:50, test:() => console.log(this.value) };
+    obj.test(); // undefined
+    const obj2 = { value:50, test:function(){console.log(this.value);} };
+    obj2.test(); // 50
+
+    // Rest, Spread & Copy
+    const product={name:"Pen", price:10};
+    const copyProduct = {...product};
+    console.log(copyProduct);
+    const a={x:1}, b={y:2};
+    console.log({...a,...b});
+    const maxValue = (...nums) => Math.max(...nums);
+    console.log(maxValue(5,8,2,10));
+
+    //  Destructuring & Optional Chaining
+    const arr=[10,20,30];
+    const [a1,a2]=arr;
+    console.log(a1,a2);
+    const laptop={brand:"Dell",ram:"8GB"};
+    const {brand} = laptop;
+    console.log(brand);
+    const info={};
+    console.log(info?.address?.city);
+
+    // Scoping
+    for(var i=0;i<3;i++){} console.log(i); // 3
+    for(let j=0;j<3;j++){} // console.log(j) => error
+    console.log("Use const to protect values");
+
+    //  Ternary
+    let kmph=70;
+    console.log(kmph>60?"Fast":"Normal");
+    let age=17;
+    console.log(age>=18?"Adult":"Minor");
+    let num=-3;
+    console.log(num>0?"Positive":num===0?"Zero":"Negative");
+
+    //  Spread & Rest Arrays
+    const nums=[1,2,3];
+    console.log([...nums,4,5]);
+    const aa=["x","y"], bb=["z"];
+    console.log([...aa,...bb]);
+    const printNames=(...names)=>names;
+    console.log(printNames("A","B","C"));
+
+    // Object Destructuring & Shorthand
+    const user={id:101,status:"active"};
+    const {id,status}=user;
+    console.log(id,status);
+    const id2=101, role="admin";
+    const user2={id2,role};
+    console.log(user2);
+    const student={username:"Harshini",score:90,show(){console.log(`${this.username} - ${this.score}`);}};
+    student.show();
+
+    //  Template Literals More
+    console.log(`Today: ${new Date().toDateString()}`);
+    console.log(`Hello Alex, your score is 85/100`);
+
+    //  Arrow Function Shorthand
+    const add=(a,b)=>a+b;
+    console.log(add(3,7));
+    const isAdult1=age=>age>=18;
+    console.log(isAdult1(20));
+    const double=n=>n*2;
+    console.log(double(8));
+
+    //  Spread Arrays & Objects
+    const arr1=[10,20,30];
+    console.log([...arr1]);
+    console.log([100,...arr1]);
+    const objA={name:"A",age:20}, objB={age:30};
+    console.log({...objA,...objB});
+
+   
+    const user3={name:"Alex",address:{city:"Bangalore"}};
+    console.log(user3?.address?.city);
+    console.log(user3?.job?.title);
+    const example={};
+    console.log(example?.prop?.subProp);
+
+  </script>
+</body>
+</html>
