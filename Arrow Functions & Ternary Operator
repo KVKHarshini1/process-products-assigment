@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions & Ternary Operator</title>
+</head>
+<body>
+    <h2>Check Console Output for Results</h2>
+
+    <script>
+        // a) Arrow function to check even number
+        const isEven = (n) => n % 2 === 0;
+
+        console.log("isEven(4):", isEven(4)); // true
+        console.log("isEven(7):", isEven(7)); // false
+
+
+        // b) Using ternary instead of if-else
+        let marks = 40;
+        let result = marks >= 35 ? "Pass" : "Fail";
+        console.log("Result:", result);
+
+
+        // c) Arrow function greet using ternary
+        const greet = (name) => {
+            let user = name ? name : "Guest"; 
+            console.log(`Hello, ${user}`);
+        };
+
+        greet("Harshini");
+        greet(); // Hello, Guest
+    </script>
+
+</body>
+</html>
