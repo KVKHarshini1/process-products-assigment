@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Square and Cube</title>
+</head>
+<body>
+  <h2>Arrow Function: Square & Cube</h2>
+  <p>Open console to see output.</p>
+
+  <script>
+    // Arrow function with implicit return
+    const squareAndCube = n => ({ square: n**2, cube: n**3 });
+
+    // Example usage
+    console.log(squareAndCube(5)); // Output: { square: 25, cube: 125 }
+    console.log(squareAndCube(2)); // Output: { square: 4, cube: 8 }
+  </script>
+</body>
+</html>
