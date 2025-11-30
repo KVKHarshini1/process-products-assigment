@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add and Remove Paragraphs</title>
+</head>
+<body>
+
+    <h2>DOM Manipulation Example</h2>
+
+    <!-- Buttons -->
+    <button id="addBtn">Add Paragraph</button>
+    <button id="removeBtn">Remove Last Paragraph</button>
+
+    <!-- Div where paragraphs will be added -->
+    <div id="content"></div>
+
+    <script>
+        // Selecting the div where paragraphs will be added
+        const contentDiv = document.getElementById("content");
+
+        // Add Paragraph Button Event
+        document.getElementById("addBtn").addEventListener("click", function () {
+            // Creating a new paragraph element
+            const newPara = document.createElement("p");
+            
+            // Assigning text to the paragraph
+            newPara.textContent = "This is a new paragraph.";
+            
+            // Appending paragraph to the div
+            contentDiv.appendChild(newPara);
+        });
+
+        // Remove Last Paragraph Button Event
+        document.getElementById("removeBtn").addEventListener("click", function () {
+            // Check if there is any paragraph to remove
+            if (contentDiv.lastChild) {
+                // Removing the last paragraph from the div
+                contentDiv.removeChild(contentDiv.lastChild);
+            }
+        });
+    </script>
+
+</body>
+</html>
